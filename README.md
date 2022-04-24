@@ -1,2 +1,2 @@
-# TeaLeaf_CyberSec
-Project portfolio for Vanderbilt CyberSec BootCamp
+# TeaShop_CyberSec
+Portfolio of completed projects from the Vanderbilt CyberSec BootCamp
