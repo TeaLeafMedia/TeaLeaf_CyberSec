@@ -68,7 +68,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker ps Output](C:\Users\cdawg\TeaShop_CyberSec\TeaLeaf_CyberSec\README\Images\docker_ps.png)
+![Docker ps Output](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/README/Images/docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
