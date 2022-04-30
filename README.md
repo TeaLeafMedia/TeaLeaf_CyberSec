@@ -44,14 +44,14 @@ Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
 - 71.203.227.158 (This may have to be updated occasionally due to VPN)
 
 Machines within the network can only be accessed by the jumpbox once the Ansible container is attached to.
-- The jumpbox is able to ssh into the Elk VM once it has connected to the zen_dewdney container. It's IP is 10.1.0.4.
+- The jumpbox is able to SSH into the Elk VM once it has connected to the zen_dewdney container. It's IP is 10.1.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 71.203.227.158       |
-| Elk VM   | No (Jumpbox access) | 10.1.0.4             |
+| Elk VM   | Yes (Kibana access via for 5601) | 71.203.227.158       |
 | Web VMs  | No (jumpbox access) | 10.1.0.4             |
 
 ### Elk Configuration
