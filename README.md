@@ -124,6 +124,15 @@ SSH into the control node and follow the steps below:
 10.2.0.4 ansible_python_interpreter=/usr/bin/python3
 ```
 - `sudo nano /etc/ansible/roles/filebeat-playbook.yml` - Update the hosts section here to reflect the groups setup in the hosts file in the provious step. 
+- Example:
+```
+---
+- name: installing and launching filebeat
+  hosts: webservers
+  become: yes
+  tasks:
+```
+
 - `ansible-playbook filbeat-playbook.yml` - This should either give all OKs or Changed after it's done. If you receive any fatal errors, check your playbook for corrections needed. 
 - If all goes through, you should be able to go to the address [https://public-ip-Elk:5601/app/kibana](https://public-ip-Elk:5601/app/kibana) and see your dashboard and look at logs being collected. 
 - Kiaban Dashboard Example:
