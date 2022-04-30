@@ -72,14 +72,13 @@ The [ELK Yaml Playbook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/ma
 - Creates the Elk container
 - Runs command to make sure docker is running every time the VM is restarted.
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+The following output displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ```
 panda-admin@Elk-Panda-VM:~$ sudo docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                              NAMES
 2d7392382f2b   sebp/elk:761   "/usr/local/bin/star…"   8 days ago   Up 3 days   0.0.0.0:5044->5044/tcp, 0.0.0.0:5601->5601/tcp, 0.0.0.0:9200->9200/tcp, 9300/tcp   elk
 ```
-![Docker ps Output](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/README/Images/docker_ps.png)
 
 ### Target Machines & Beats
 
