@@ -92,6 +92,6 @@ SSH into the control node and follow the steps below:
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - You will want to update your Hosts file inside /etc/ansible/hosts with your Host groups. We have set them up as [webservers] and [elk]. When you are editing your yaml files, you will specify in the host section which one to install the playbook to. 
-- <public-ip-ELK>:5601/app/kibana will take you to the Kibana dashboard. You may need to change the IP depending on if your host machines IP has changed or if the public IP of your Elk machine has changed at all. 
+- '<public-ip-ELK>:5601/app/kibana' will take you to the Kibana dashboard. You may need to change the IP depending on if your host machines IP has changed or if the public IP of your Elk machine has changed at all. 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
