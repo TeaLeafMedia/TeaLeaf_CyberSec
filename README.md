@@ -78,7 +78,7 @@ We have installed the following Beats on these machines:
 - FileBeat 7.6.1 & MetricBeat 7.6.1
 
 These Beats allow us to collect the following information from each machine:
-- FileBeat collects log data. For example, you could have it gather info on WiFi networks joined and have it alert you if a WiFi network not on a whitelist was connected to. 
+- FileBeat collects log data. For example, you could have it gather info on WiFi networks joined to check if a WiFi network not on a whitelist was connected to.
 - MetricBeat collects system metrics. For example, you can set it to collect information on CPU information of your Web VMs to check for unusual CPU usage. 
 
 ### Using the Playbook
