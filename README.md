@@ -44,7 +44,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-- 71.203.227.158 **(This may have to be updated occasionally due to VPN)**
+- 71.203.227.158 :warning: **(This may have to be updated occasionally due to VPN)** :warning:
 
 Machines within the network can only be accessed by the jumpbox once the Ansible container is attached to.
 
