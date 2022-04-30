@@ -109,7 +109,7 @@ SSH into the control node and follow the steps below:
 - [FileBeat PlayBook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/filebeat-playbook.yml)
 - Copy this playbook to your /etc/ansible/roles directory. 
 - You will want to update your Hosts file inside /etc/ansible/hosts with your Host groups. We have set them up as [webservers] and [elk]. When you are editing your yaml files, you will specify in the host section which one to install the playbook to. 
-- 'public-ip-ELK:5601/app/kibana' will take you to the Kibana dashboard. You may need to change the IP depending on if your host machines IP has changed or if the public IP of your Elk machine has changed at all. 
+- [public-ip-ELK:5601/app/kibana] will take you to the Kibana dashboard. You may need to change the IP if your host machines IP has changed or if the public IP of your Elk machine has changed at all.
 
 ### Running the Playbook
 
@@ -118,6 +118,6 @@ SSH into the control node and follow the steps below:
 ![Hosts Example](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/README/Images/Ansible%20Hosts.png)
 - `sudo nano /etc/ansible/roles/filebeat-playbook.yml` - Update the hosts section here to reflect the groups setup in the hosts file in the provious step. 
 - `ansible-playbook filbeat-playbook.yml` - This should either give all OKs or Changed after it's done. If you receive any fatal errors, check your playbook for corrections needed. 
-- If all goes through, you should be able to go to the address public-ELK-ip:5601/app/kibana and see your dashboard and look at logs being collected. 
+- If all goes through, you should be able to go to the address [public-ELK-ip:5601/app/kibana] and see your dashboard and look at logs being collected. 
 - Kiaban Dashboard Example:
 ![Kibana](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/README/Images/Kibana%20Logs.png)
