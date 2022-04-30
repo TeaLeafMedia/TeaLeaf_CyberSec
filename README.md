@@ -96,7 +96,7 @@ SSH into the control node and follow the steps below:
 - You will want to update your Hosts file inside /etc/ansible/hosts with your Host groups. We have set them up as [webservers] and [elk]. When you are editing your yaml files, you will specify in the host section which one to install the playbook to. 
 - 'public-ip-ELK:5601/app/kibana' will take you to the Kibana dashboard. You may need to change the IP depending on if your host machines IP has changed or if the public IP of your Elk machine has changed at all. 
 
-### Bonus
+### Running the Playbook
 
 - sudo nano /etc/ansible/hosts - Update your hosts file to reflect the proper groups and their IPs. 
 - Example:
