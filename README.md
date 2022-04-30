@@ -48,7 +48,9 @@ Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
 
 Machines within the network can only be accessed by the jumpbox once the Ansible container is attached to.
 
-- The jumpbox is able to SSH into the Elk VM once it has connected to the zen_dewdney container. It's IP is 10.1.0.4.
+- The jumpbox is able to SSH into the  Wen VMs and the Elk VM once it has connected to the zen_dewdney container. It's private IP is 10.1.0.4 which is allowed through the Security rule. 
+- `sudo docker start zen_dewdney`
+- `sudo docker attach zen_dewdney`
 
 A summary of the access policies in place can be found in the table below.
 
