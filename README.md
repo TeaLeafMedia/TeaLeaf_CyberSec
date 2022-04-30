@@ -99,6 +99,7 @@ SSH into the control node and follow the steps below:
 ### Bonus
 
 - sudo nano /etc/ansible/hosts - Update your hosts file to reflect the proper groups and their ips
+[Hosts Example](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/README/Images/Ansible%20Hosts.png)
 - sudo nano /etc/ansible/roles/filebeat-playbook.yml - Update the hosts section here to reflect the groups setup in the hosts file in the provious step. 
 - ansible-playbook filbeat-playbook.yml - This should either give all OKs or Changed after it's done. If you receive any fatal errors, check your playbook for corrections needed. 
 - If all goes through, you should be able to go to the address public-ELK-ip:5601/app/kibana and see your dashboard and look at logs being collected. 
