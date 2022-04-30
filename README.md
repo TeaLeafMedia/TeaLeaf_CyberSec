@@ -59,11 +59,13 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - Creating a playbook allows you to run a set of specified tasks and do it on multiple containers at once, saving time, and being able to do this quickly on multiple machines. 
 
-The playbook implements the following tasks:
+The [ELK Yaml Playbook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/install-elk.yml) implements the following tasks:
 
 - Install Docker & create container
-- Create YAML playbook to install proper packages and set system settings
-- Test external access to container via Kibana to check connections
+- Installs python3
+- Increases virtual memory and then sets a command to run anytime the VM is restarted to keep the virtual memory at that set value.
+- Creates the Elk container
+- Runs command to make sure docker is running every time the VM is restarted.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
