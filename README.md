@@ -51,7 +51,7 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 71.203.227.158       |
-| Elk VM   | Yes (Kibana access via for 5601) | 71.203.227.158       |
+| Elk VM   | Yes (Kibana access via port 5601) | 71.203.227.158       |
 | Web VMs  | No (jumpbox access) | 10.1.0.4             |
 
 ### Elk Configuration
