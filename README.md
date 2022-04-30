@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Panda ELK Network](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Diagrams/New%20Panda-Network-Map.drawio.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the install_elk.yml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the [install_elk.yml](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/install-elk.yml) file may be used to install only certain pieces of it, such as Filebeat.
 
   - [ELK Yaml Playbook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/install-elk.yml)
 
@@ -56,7 +56,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 71.203.227.158       |
+| Jump Box | Yes (via SSH on port 22)                | 71.203.227.158       |
 | Elk VM   | Yes (Kibana access via port 5601) | 71.203.227.158       |
 | Web VMs  | No (jumpbox access) | 10.1.0.4             |
 
