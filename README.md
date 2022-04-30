@@ -53,8 +53,8 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 71.203.227.158       |
-| Elk VM   | No (Jumbox access)  | 10.1.0.4             |
-| Web VMs  | No (jumbox access)  | 10.1.0.4             |
+| Elk VM   | No (Jumpbox access) | 10.1.0.4             |
+| Web VMs  | No (jumpbox access) | 10.1.0.4             |
 
 ### Elk Configuration
 
