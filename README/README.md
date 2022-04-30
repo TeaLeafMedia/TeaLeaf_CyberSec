@@ -62,9 +62,10 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - Creating a playbook allows you to run a set of specified tasks and do it on multiple containers at once, saving time, and being able to do this quickly on multiple machines. 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+
+- Install Docker & create container
+- Create YAML playbook to install proper packages and set system settings
+- Test external access to container via Kibana to check connections
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -79,7 +80,8 @@ We have installed the following Beats on these machines:
 - FileBeat 7.6.1 & MetricBeat 7.6.1
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- FileBeat collects log data. For instance you could have it gather info on wifi networks joined and have it alert you if a WiFi network not on a whitelist was connected to. 
+- MetricBeat collects 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
