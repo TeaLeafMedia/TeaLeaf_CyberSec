@@ -34,7 +34,7 @@ The configuration details of each machine may be found below.
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.1.0.4   | Linux            |
-| Elk VM   | Kibana   | 10.2.0.4   | Linux            |
+| Elk VM   | Kibana   | 10.2.0.4   | Linux            | 
 | PandaVM1 | Elk Host | 10.1.0.5   | Linux            |
 | PandaVM2 | Elk Host | 10.1.0.6   | Linux            |
 
@@ -74,6 +74,11 @@ The [ELK Yaml Playbook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/ma
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
+```
+panda-admin@Elk-Panda-VM:~$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED      STATUS      PORTS                                                                              NAMES
+2d7392382f2b   sebp/elk:761   "/usr/local/bin/star…"   8 days ago   Up 3 days   0.0.0.0:5044->5044/tcp, 0.0.0.0:5601->5601/tcp, 0.0.0.0:9200->9200/tcp, 9300/tcp   elk
+```
 ![Docker ps Output](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/README/Images/docker_ps.png)
 
 ### Target Machines & Beats
