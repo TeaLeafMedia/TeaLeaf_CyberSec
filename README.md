@@ -70,6 +70,7 @@ The following screenshot displays the result of running `docker ps` after succes
 ![Docker ps Output](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/README/Images/docker_ps.png)
 
 ### Target Machines & Beats
+
 This ELK server is configured to monitor the following machines:
 - Panda-WEB-VM-1: 10.1.0.5
 - Panda-WEB-VM-2: 10.1.0.6
@@ -82,16 +83,23 @@ These Beats allow us to collect the following information from each machine:
 - MetricBeat collects system metrics. For example, you can set it to collect information on CPU information of your Web VMs to check for unusual CPU usage. 
 
 ### Using the Playbook
+
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the [FileBeat PlayBook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/filebeat-playbook.yml) file to /atc/ansible/roles.
+- Update the hosts file to include the host group you want to install the playbook on. Be sure to include the IPs as well. 
+- Run the playbook, and navigate to public-ip-Elk:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
+- [FileBeat PlayBook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/filebeat-playbook.yml)
+- Copy this playbook to your /etc/ansible/roles directory. 
 - You will want to update your Hosts file inside /etc/ansible/hosts with your Host groups. We have set them up as [webservers] and [elk]. When you are editing your yaml files, you will specify in the host section which one to install the playbook to. 
 - 'public-ip-ELK:5601/app/kibana' will take you to the Kibana dashboard. You may need to change the IP depending on if your host machines IP has changed or if the public IP of your Elk machine has changed at all. 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+### Bonus
+
+- sudo nano /etc/ansible/hosts - Update your hosts file to reflect the proper groups and their ips
+- sudo nano /etc/ansible/roles/filebeat-playbook.yml - Update the hosts section here to reflect the groups setup in the hosts file in the provious step. 
+- ansible-playbook filbeat-playbook.yml - This should either give all OKs or Changed after it's done. If you receive any fatal errors, check your playbook for corrections needed. 
+- If all goes through, you should be able to go to the address public-ELK-ip:5601/app/kibana and see your dashboard and look at logs being collected. 
+
