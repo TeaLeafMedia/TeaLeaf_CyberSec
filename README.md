@@ -128,7 +128,7 @@ SSH into the control node and follow the steps below:
 ```
 ---
 - name: installing and launching filebeat
-  hosts: webservers
+  hosts: webservers <------ Make sure this matches the target machine group.
   become: yes
   tasks:
 ```
