@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Panda ELK Network](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Diagrams/New%20Panda-Network-Map.drawio.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the [install_elk.yml](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/install-elk.yml) file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the [install_elk.yml](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/install-elk.yml) file may be used to install only certain pieces of it, such as Filebeat.
 
   - [ELK Yaml Playbook](https://github.com/TeaLeafMedia/TeaLeaf_CyberSec/blob/main/Ansible/install-elk.yml)
 
@@ -22,7 +22,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly stable, in addition to restricting access to the network.
 
-- Load balancers focus mainly on the Availability portion of the CIA triad, being able to divert traffic if loads are too high or if one maching goes down. Also, using a jumpbox to access the containers adds a layer of security because rules are setup to only allow the private IP of the jumpbox to make changes to the other Web VMs. 
+- Load balancers focus mainly on the Availability portion of the CIA triad, being able to divert traffic if loads are too high or if one machine goes down. Also, using a jumpbox to access the containers adds a layer of security because rules are setup to only allow the private IP of the jumpbox to make changes to the other Web VMs. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the metrics and system logs.
 
@@ -48,7 +48,8 @@ Only the Jump-Box-Provisioner machine can accept connections from the Internet. 
 
 Machines within the network can only be accessed by the jumpbox once the Ansible container is attached to.
 
-- The jumpbox is able to SSH into the  Wen VMs and the Elk VM once it has connected to the zen_dewdney container. It's private IP is 10.1.0.4 which is allowed through the Security rule. 
+- The jumpbox is able to SSH into the Web VMs and the Elk VM once it has connected to the zen_dewdney container. The private IP of the jump box is 10.1.0.4 which is allowed through the Security rule. 
+
 - `sudo docker start zen_dewdney`
 - `sudo docker attach zen_dewdney`
 
@@ -58,7 +59,7 @@ A summary of the access policies in place can be found in the table below.
 |----------|---------------------|----------------------|
 | Jump Box | Yes (via SSH on port 22)                | 71.203.227.158       |
 | Elk VM   | Yes (Kibana access via port 5601) | 71.203.227.158       |
-| Web VMs  | No (jumpbox access) | 10.1.0.4             |
+| Web VMs  | Yes (jumpbox access via SSH and through http through Load Balancer public IP) | 10.1.0.4 & 10.1.0.5             |
 
 ### Elk Configuration
 
