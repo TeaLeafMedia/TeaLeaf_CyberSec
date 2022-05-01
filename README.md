@@ -58,8 +58,8 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes (via SSH on port 22)                | 71.203.227.158       |
-| Elk VM   | Yes (Kibana access via port 5601) | 71.203.227.158       |
-| Web VMs  | Yes (jumpbox access via SSH and through http through Load Balancer public IP) | 10.1.0.4 & 10.1.0.5             |
+| Elk VM   | Yes (Kibana access via port 5601 and SSH from jump box) | 71.203.227.158       |
+| Web VMs  | Yes (jumpbox access via SSH and HTTP through Load Balancer public IP) | 10.1.0.4 & 10.1.0.5             |
 
 ### Elk Configuration
 
